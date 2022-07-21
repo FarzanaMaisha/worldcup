@@ -1,63 +1,211 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Fira+Sans:wght@800&family=Inter:wght@700&family=Lora&family=Montserrat:wght@700;800&family=Poppins:wght@500&family=Roboto:wght@500&display=swap');
 
+
+
 body {
     font-family: 'Poppins', sans-serif;
+    max-width: 100%;
+
+}
+
+main {
+    margin: 50px;
+}
+
+.flex-container {
+    display: flex;
 
 }
 
 
+.flex-container .half-width {
+    width: 50%;
+}
+
+.details {
+    margin-top: 50px;
+
+}
+
+/*------------ TOP BANNER ----------*/
 .container-one {
-    margin: 50px;
     border-radius: 30px;
     background-position: center;
-    background-color: rgb(19, 130, 204);
-    background-image: radial-gradient(rgb(19, 130, 204), rgb(187, 201, 211));
-}
-
-.banner {
-    padding: 2% 5%;
-
-    align-items: center;
-    display: flex;
-    width: 50%;
-    width: 1321px;
-    height: 646px;
+    background-color: rgb(10, 86, 136);
     background-image: url(images/football.png);
     background-repeat: no-repeat;
     background-size: cover;
+}
 
-
+.banner {
+    padding: 5%;
 }
 
 .banner h1 {
     font-size: 5vw;
     font-weight: 800;
+    color: rgb(255, 246, 197);
+    text-shadow: 2px 2px black;
     margin: 0;
-    padding: 0;
 
 }
 
 
-.banner p {
-    font-size: 1vw;
+.banner-description {
+    font-size: 2vw;
     font-weight: 200;
+    margin-bottom: 10%;
+    color: rgb(247, 212, 99);
 
 }
 
-.half-width {
-    width: 50%;
-}
+.banner img {
 
-.half-width img {
-    width: 67vw;
+    width: 100%;
 }
 
 
 .button-live {
     text-decoration: none;
-    padding: 10px;
-    margin: 20px 0;
-    border-radius: 5px;
+    font-size: 2vw;
+    padding: 2% 5%;
+    margin: 5% 0;
+    border-radius: 10px;
     background-color: green;
     color: aliceblue;
+}
+
+/* NAV */
+
+.nav {
+    background-color: rgb(22, 3, 94);
+    height: 312px;
+    width: 312px;
+    padding: 0 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+
+}
+
+.nav-button {
+    color: rgb(78, 78, 78);
+    font-size: 1.2em;
+    text-decoration: none;
+    padding: 10px 0px;
+    margin: 0 20px;
+    border-radius: 5px;
+    background-color: rgb(235, 245, 244);
+    text-align: center;
+    box-shadow: 1px 2px rgb(59, 59, 59);
+
+}
+
+/* BLOG */
+
+.blogs {
+    margin-left: 40px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    font-size: 1vw;
+}
+
+.blog img {
+    border-radius: 10px;
+    width: 100%;
+}
+
+.blog-details {
+    margin: 20px;
+}
+
+.article-button {
+    color: rgb(78, 78, 78);
+    text-decoration: none;
+    border: 1px solid gray;
+    padding: 5px 20px;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.article-icons {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+}
+
+/* FOOTER*/
+
+footer {
+    background-color: darkslategray;
+    text-align: center;
+    padding: 50px 20px;
+    margin: 0;
+    color: aliceblue;
+}
+
+hr {
+    border: 1px solid rgb(83, 94, 94);
+}
+
+.labels {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 50px 0px;
+}
+
+.label {
+    padding: 20px;
+    text-decoration: none;
+    color: rgb(184, 182, 182);
+    font-weight: 100px;
+}
+
+
+@media screen and (max-width:576px) {
+
+    /* TOPBANNER */
+    .flex-container {
+
+        flex-direction: column;
+
+    }
+
+    .banner {
+        display: flex;
+        text-align: center;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .half-width {
+        width: 100%;
+    }
+
+    .half-width img {
+        width: 100%;
+    }
+
+    /* BLOG */
+    .blogs {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+}
+
+@media screen and (max- width:992px) {
+    .container {
+        Grid-template-column: repeat(2, 1fr)
+    }
+
 }
