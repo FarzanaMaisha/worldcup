@@ -9,7 +9,7 @@ body {
 }
 
 main {
-    margin: 50px;
+    margin: 2% 5%;
 }
 
 .flex-container {
@@ -23,7 +23,7 @@ main {
 }
 
 .details {
-    margin-top: 50px;
+    margin-top: 5%;
 
 }
 
@@ -52,7 +52,7 @@ main {
 
 
 .banner-description {
-    font-size: 2vw;
+    font-size: 1.5vw;
     font-weight: 200;
     margin-bottom: 10%;
     color: rgb(247, 212, 99);
@@ -67,7 +67,7 @@ main {
 
 .button-live {
     text-decoration: none;
-    font-size: 2vw;
+    font-size: 1.5vw;
     padding: 2% 5%;
     margin: 5% 0;
     border-radius: 10px;
@@ -98,8 +98,12 @@ main {
     border-radius: 5px;
     background-color: rgb(235, 245, 244);
     text-align: center;
-    box-shadow: 1px 2px rgb(59, 59, 59);
 
+}
+
+.current-page {
+    background-color: darkgreen;
+    color: aliceblue;
 }
 
 /* BLOG */
@@ -111,6 +115,11 @@ main {
     grid-template-columns: repeat(3, 1fr);
     gap: 50px;
     font-size: 1vw;
+}
+
+.blog {
+    background-color: rgb(243, 224, 217);
+    border-radius: 2%;
 }
 
 .blog img {
@@ -148,34 +157,40 @@ main {
 footer {
     background-color: darkslategray;
     text-align: center;
-    padding: 50px 20px;
+    padding: 5% 10%;
     margin: 0;
     color: aliceblue;
 }
 
 hr {
     border: 1px solid rgb(83, 94, 94);
+    margin: 2% 0px;
+
 }
 
 .labels {
     display: flex;
     justify-content: center;
     align-content: center;
-    margin: 50px 0px;
 }
 
 .label {
-    padding: 20px;
+    padding: 2%;
     text-decoration: none;
     color: rgb(184, 182, 182);
     font-weight: 100px;
 }
 
+.view-all {
+    display: none;
+}
 
-@media screen and (max-width:576px) {
+/* MOBILE VIEW */
+@media screen and (max-width:577px) {
 
     /* TOPBANNER */
     .flex-container {
+        justify-content: center;
 
         flex-direction: column;
 
@@ -188,6 +203,12 @@ hr {
         align-items: center;
     }
 
+    .banner-description,
+    .button-live {
+        font-size: 3vw;
+
+    }
+
     .half-width {
         width: 100%;
     }
@@ -196,16 +217,131 @@ hr {
         width: 100%;
     }
 
+    /*-------*/
+    /* NAVBAR */
+
+    .nav {
+        background-color: white;
+        padding: 0 1%;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        font-size: 2vw;
+        margin: 0;
+
+    }
+
+    .nav-button {
+        padding: 2% 0px;
+        border: 0px solid gray;
+        margin: 2%;
+    }
+
     /* BLOG */
     .blogs {
+        margin: 0;
+        margin-bottom: 5%;
         grid-template-columns: repeat(1, 1fr);
+        font-size: 3vw;
+    }
+
+    /* FOOTER */
+    .labels {
+        flex-direction: column;
+
     }
 
 }
 
-@media screen and (max- width:992px) {
+/* TABLET VIEW */
+@media screen and (min-width:577px) and (max-width:992px) {
+
+    /* TOPBANNER */
+
+
+    .banner {
+        display: flex;
+        text-align: left;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .banner-description,
+    .button-live {
+        font-size: 2vw;
+
+    }
+
+    .half-width {
+        width: 100%;
+    }
+
+    .half-width img {
+        width: 100%;
+    }
+
+    /*-------*/
+    /* NAVBAR */
+    .flex-container.details {
+        flex-direction: column;
+    }
+
+    .nav {
+        background-color: white;
+        padding: 0 1%;
+        display: flex;
+        flex-direction: row;
+        justify-items: center;
+        align-content: center;
+        font-size: 2vw;
+        height: 100%;
+        width: 100%;
+
+    }
+
+    .nav-button {
+        padding: 2% 6%;
+        border: 0px solid rgb(58, 49, 49);
+        margin: 2%;
+    }
+
+    /* BLOG */
+    .blogs {
+        margin: 0;
+        grid-template-columns: repeat(2, 1fr);
+        font-size: 2vw;
+    }
+
+    /* VIEW ALL  */
+    .view-button {
+        display: flex;
+        justify-content: center;
+    }
+
+    .view-all {
+        display: block;
+        text-decoration: none;
+        font-size: 1.5vw;
+        padding: 2% 5%;
+        margin: 5% 0;
+        border-radius: 10px;
+        background-color: green;
+        color: aliceblue;
+    }
+
+    /* FOOTER */
+    .labels {
+        flex-wrap: wrap;
+    }
+
+
+
+}
+
+
+/* @media screen and (max- width:992px) {
     .container {
-        Grid-template-column: repeat(2, 1fr)
+        Grid-template-column: repeat(2, 1fr);
     }
 
-}
+} */
